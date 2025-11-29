@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://pregnancydate.online/sitemap.xml

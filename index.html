@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PregnancyDate.online – A complete Pregnancy Due Date Calculator based on your Last Menstrual Period (LMP). Calculate your due date, pregnancy weeks, trimesters, baby growth timeline, symptoms and milestones. Free online pregnancy calculator with week-by-week guide.">
+    <meta name="keywords" content="pregnancy due date calculator, pregnancy date calculator, pregnancy calculator online, how to calculate pregnancy due date, LMP calculator, due date by LMP, pregnancy week calculator, pregnancy trimester calculator, baby due date online, pregnancy timeline week by week">
+    <meta name="author" content="PregnancyDate.online">
+    <title>Pregnancy Due Date Calculator Online | Accurate Pregnancy Date Calculator by LMP</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="msapplication-TileColor" content="#e84e89">
+    <meta name="theme-color" content="#e84e89">
+
+    <!-- Canonical and Open Graph Tags -->
+    <link rel="canonical" href="https://pregnancydate.online/">
+    <meta property="og:title" content="Pregnancy Due Date Calculator — Estimate by LMP">
+    <meta property="og:description" content="Free pregnancy due date calculator using your Last Menstrual Period (LMP). Instant week-by-week guide and trimester info.">
+    <meta property="og:url" content="https://pregnancydate.online/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pregnancydate.online/hero.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://pregnancydate.online/hero.jpeg">
+    <link rel="alternate" href="https://pregnancydate.online/" hreflang="en">
+
+    <!-- Schema for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Pregnancy Due Date Calculator Online",
+      "url": "https://pregnancydate.online",
+      "description": "Free pregnancy due date calculator using LMP. Estimate your due date, pregnancy week and trimester instantly.",
+      "mainEntity": {
+        "@type": "FAQPage",
+        "name": "Pregnancy Due Date Calculator FAQs",
+        "url": "https://pregnancydate.online"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --accent: #e84e89;
+            --bg: #f9fcff;
+            --muted: #777;
+            --card-bg: #ffffff;
+            --result-bg: #fff7fb;
+            --maxw: 1080px;
+            --radius: 10px;
+            --shadow: 0 2px 10px rgba(0,0,0,0.05);
+            --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+
+        * { box-sizing: border-box; }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-sans);
+            background: var(--bg);
+            color: #222;
+            line-height: 1.7;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        .container { max-width: var(--maxw); margin: 0 auto; padding: 20px; }
+        
+        /* Navigation */
+        .site-nav {
+            background: var(--card-bg);
+            padding: 16px 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+        .nav-container {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .site-logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            text-align: center;
+            padding: 0 20px 40px;
+        }
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+        h1 {
+            color: var(--accent);
+            font-size: 2rem;
+            margin: 0 0 10px;
+        }
+        .lead {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #444;
+        }
+        
+        /* Calculator */
+        .calculator-box {
+            background: var(--card-bg);
+            padding: 22px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-top: 20px;
+        }
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type=date], input[type=text], select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #dcdcdc;
+            font-size: 16px;
+        }
+        button {
+            background: var(--accent);
+            color: #fff;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: opacity 0.2s;
+            margin-top: 10px;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        button:focus {
+            outline: 2px solid rgba(232,78,137,0.25);
+        }
+        .result-box {
+            display: none;
+            margin-top: 18px;
+            padding: 18px;
+            background: var(--result-bg);
+            border-left: 5px solid var(--accent);
+            border-radius: 8px;
+        }
+        
+        /* Content */
+        h2 { color: var(--accent); margin-top: 28px; }
+        ul { margin: 12px 0 12px 20px; }
+        
+        /* Ads */
+        .ads {
+            margin: 18px 0;
+            text-align: center;
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: var(--radius);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 24px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px;
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+        }
+        .footer-links {
+            margin-top: 10px;
+        }
+        .footer-links a {
+            margin: 0 10px;
+        }
+        
+        /* Mobile Styles */
+        @media (max-width: 720px) {
+            h1 { font-size: 1.5rem; }
+            .container { padding: 16px; }
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                gap: 15px;
+            }
+            .hero-section {
+                padding: 0 10px 30px;
+            }
+            .hero-image {
+                max-height: 250px;
+            }
+        }
+        
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        
+        /* Cookie Consent */
+        #cookie-consent-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+        }
+        #cookie-consent-bar p {
+            margin: 0 0 10px;
+        }
+        .cookie-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .cookie-buttons button {
+            margin-top: 0;
+        }
+        .cookie-buttons .decline {
+            background: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <div class="site-logo">PregnancyDate.online</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <img src="hero.jpeg" alt="Pregnancy Due Date Calculator - Calculate your estimated due date" class="hero-image">
+        <h1>Pregnancy Due Date Calculator</h1>
+        <p class="lead">Your free, accurate, and easy-to-use Pregnancy Date Calculator based on your Last Menstrual Period (LMP). Calculate your due date, pregnancy weeks, trimester and baby growth timeline instantly. No signup required.</p>
+        
+        <!-- Adsense Ad (Top Banner) -->
+        <div class="ads">
+            Ad Space - Google AdSense
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Calculator -->
+        <div class="calculator-box">
+            <label for="lmp">Select Last Menstrual Period (LMP):</label>
+            <input type="date" id="lmp">
+            <button id="calcBtn">Calculate Due Date</button>
+
+            <div id="result" class="result-box"></div>
+
+            <!-- AdSense Ad -->
+            <div class="ads">
+                Ad Space - Google AdSense
+            </div>
+        </div>
+
+        <!-- LONG SEO CONTENT STARTS -->
+
+        <h2>What Is a Pregnancy Due Date Calculator?</h2>
+        <p>
+            A <strong>Pregnancy Due Date Calculator</strong> is an online tool that helps expectant mothers estimate the approximate date their baby may be born. This estimation is commonly based on the <strong>Last Menstrual Period (LMP)</strong>, which is considered the most reliable method for early pregnancy calculation. PregnancyDate.online provides a simple and highly effective <strong>pregnancy date calculator</strong> designed for women around the world who want to know their estimated due date quickly.
+        </p>
+
+        <p>
+            Many new mothers search for terms like <em>"pregnancy calculator online," "how to calculate due date," "due date by LMP,"</em> and <em>"pregnancy week calculator."</em> This page covers everything in detail. Our goal is to offer a comprehensive guide that gives you clarity and confidence throughout your pregnancy journey. This tool does not provide medical advice, but serves as a helpful informational resource.
+        </p>
+
+        <h2>How the Pregnancy Date Calculator Works</h2>
+        <p>
+            The Pregnancy Due Date Calculator uses a globally accepted formula called <strong>Naegele's Rule</strong>. According to this method, your expected due date is calculated by adding:
+        </p>
+        <ul>
+            <li><strong>280 days (40 weeks)</strong> to your Last Menstrual Period</li>
+            <li>This calculation assumes a regular 28-day menstrual cycle</li>
+        </ul>
+
+        <p>
+            The formula is simple but powerful. Even though every pregnancy is unique, this method offers a reliable estimate used by medical professionals and pregnancy care centers across the world. If your cycle is longer or shorter, the calculation may vary slightly, but the LMP-based <strong>pregnancy week calculator</strong> remains one of the simplest and most effective tools for estimation.
+        </p>
+
+        <h2>Why Knowing Your Pregnancy Due Date is Important</h2>
+        <p>
+            Understanding your pregnancy due date helps you track your <strong>pregnancy week-by-week</strong>, monitor baby development, plan checkups, and prepare for delivery. By knowing your estimated delivery date, you can also use additional tools like:
+        </p>
+        <ul>
+            <li>Pregnancy trimester calculator</li>
+            <li>Baby growth timeline</li>
+            <li>Symptoms week by week</li>
+            <li>Healthy pregnancy diet planning</li>
+        </ul>
+
+        <p>
+            While this tool is helpful to estimate, your doctor may adjust your due date based on ultrasound scans during early pregnancy. This is normal and common. Our <strong>pregnancy date calculator</strong> offers a quick and convenient method for primary estimation.
+        </p>
+
+        <!-- ADSENSE -->
+        <div class="ads">
+            Ad Space - Google AdSense
+        </div>
+
+        <h2>Pregnancy Week-by-Week Timeline (Detailed)</h2>
+
+        <h3>Week 1–4: Early Pregnancy Development</h3>
+        <p>
+            The first few weeks of pregnancy involve rapid changes within the body. Implantation happens around Week 3–4, and many women begin experiencing early pregnancy symptoms such as fatigue, breast tenderness, and mild cramping. The embryo is extremely small, yet fundamental development starts immediately.
+        </p>
+
+        <h3>Week 5–8: Formation of Organs</h3>
+        <p>
+            During this period, major organs such as the brain, spinal cord, and heart begin forming. Many mothers begin to recognize pregnancy symptoms during this stage, prompting them to use the <strong>pregnancy calculator online</strong> to estimate dates and weeks.
+        </p>
+
+        <h3>Week 9–12: End of First Trimester</h3>
+        <p>
+            The first trimester is a major milestone. The risk of miscarriage drops significantly after Week 12. The baby's organs are in place and continue developing. Using a <strong>pregnancy week calculator</strong> helps track growth and essential milestones.
+        </p>
+
+        <h3>Week 13–20: Second Trimester Growth</h3>
+        <p>
+            This phase typically brings relief from nausea and fatigue. Many women feel their baby's first movements around Week 18–20. Ultrasound scans during this period provide clearer images and help doctors confirm or adjust your <strong>due date</strong>.
+        </p>
+
+        <h3>Week 21–28: Baby Growth & Activity</h3>
+        <p>
+            The baby becomes more active, responsive, and developed. Mothers may experience increased energy. Monitoring your <strong>pregnancy timeline</strong> helps better understand these developmental phases.
+        </p>
+
+        <h3>Week 29–36: Final Preparation</h3>
+        <p>
+            During these weeks, the baby gains weight rapidly and prepares for birth. Mothers may experience back pain, swelling, or fatigue. Knowing your <strong>estimated due date</strong> is essential for discussing birth plans with your doctor.
+        </p>
+
+        <h3>Week 37–40: Ready for Delivery</h3>
+        <p>
+            Most babies are fully developed by Week 39–40. Labor signs include contractions, water breaking, and pelvic pressure. The <strong>pregnancy due date calculator</strong> gives a clearer picture of when your baby may arrive, though delivery can happen earlier or later.
+        </p>
+
+        <div class="ads">
+            Ad Space - Google AdSense
+        </div>
+
+        <h2>Benefits of Using a Pregnancy Due Date Calculator</h2>
+        <p>
+            The <strong>Pregnancy Due Date Calculator</strong> on PregnancyDate.online provides several advantages:
+        </p>
+        <ul>
+            <li>Instant and free due date estimation</li>
+            <li>Easy understanding of pregnancy timeline</li>
+            <li>Accurate week-by-week pregnancy breakdown</li>
+            <li>No medical expertise needed</li>
+            <li>Helpful for first-time mothers</li>
+        </ul>
+
+        <h2>Low Competition Pregnancy Keywords Used on This Page</h2>
+        <ul>
+            <li>pregnancy date calculator online</li>
+            <li>calculate pregnancy by LMP</li>
+            <li>pregnancy timeline week by week</li>
+            <li>how to calculate due date naturally</li>
+            <li>pregnancy week calculator online</li>
+        </ul>
+
+        <h2>High Competition Keywords Naturally Added</h2>
+        <ul>
+            <li>pregnancy due date calculator</li>
+            <li>pregnancy calculator</li>
+            <li>due date calculator</li>
+            <li>pregnancy trimester calculator</li>
+        </ul>
+
+        <div class="ads">
+            Ad Space - Google AdSense
+        </div>
+
+        <h2>Frequently Asked Questions (FAQs)</h2>
+
+        <h3>1. How accurate is the pregnancy due date calculator?</h3>
+        <p>
+            The calculator provides an estimate based on the Last Menstrual Period (LMP). Actual delivery can vary. Many factors can influence timing, including cycle length and medical conditions.
+        </p>
+
+        <h3>2. What if I don't know my LMP?</h3>
+        <p>
+            You should refer to an ultrasound-based estimate provided by your doctor. Ultrasound measurements during early pregnancy are often more precise.
+        </p>
+
+        <h3>3. Can pregnancy due date change?</h3>
+        <p>
+            Yes, doctors may adjust your estimated due date during scans. It's normal for due dates to shift based on fetal size and development.
+        </p>
+
+        <h3>4. Is a due date the actual delivery date?</h3>
+        <p>
+            No. Only about 5% of women deliver on their exact estimated due date. The date is an approximate guideline.
+        </p>
+
+        <h3>5. Can I calculate pregnancy without LMP?</h3>
+        <p>
+            Yes, an ultrasound scan or conception date estimated by your doctor may be used.
+        </p>
+
+        <h3>6. Does trimester calculation depend on due date?</h3>
+        <p>
+            Yes, your due date helps determine which trimester you are currently in.
+        </p>
+
+        <h3>7. How long is a full-term pregnancy?</h3>
+        <p>
+            A full-term pregnancy is around 40 weeks or 280 days from the first day of the LMP.
+        </p>
+
+        <!-- END OF SEO CONTENT -->
+
+        <div class="ads">
+            Ad Space - Google AdSense
+        </div>
+
+    </div>
+
+    <!-- Cookie Consent Bar -->
+    <div id="cookie-consent-bar">
+        <p>This website uses cookies to personalize content and ads. By continuing to use this site, you consent to our use of cookies.</p>
+        <div class="cookie-buttons">
+            <button onclick="giveConsent(true)">Accept</button>
+            <button class="decline" onclick="giveConsent(false)">Decline</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 PregnancyDate.online — Informational only, not medical advice.</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="about.html">About</a> | 
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+    <script>
+        // Calculator functionality
+        document.addEventListener('DOMContentLoaded', function(){
+            const lmpInput = document.getElementById('lmp');
+            const resultDiv = document.getElementById('result');
+            const calcBtn = document.getElementById('calcBtn');
+
+            if(calcBtn){
+                calcBtn.addEventListener('click', function(e){
+                    const lmp = lmpInput.value;
+                    if(!lmp){ alert('Please select your LMP date.'); return; }
+                    const date = new Date(lmp);
+                    date.setDate(date.getDate() + 280);
+                    resultDiv.style.display = 'block';
+                    resultDiv.innerHTML = '<h3>Estimated Due Date:</h3><strong>'+ date.toDateString() +'</strong>';
+                });
+            }
+
+            // Cookie consent simple: store 'adsense_consent' = 'yes'/'no'
+            const consentKey = 'adsense_consent';
+            const consent = localStorage.getItem(consentKey);
+            const consentBar = document.getElementById('cookie-consent-bar');
+            if(!consent && consentBar) consentBar.style.display = 'flex';
+
+            window.giveConsent = function(yes){
+                localStorage.setItem(consentKey, yes ? 'yes' : 'no');
+                if(consentBar) consentBar.style.display = 'none';
+                if(yes){
+                    // load AdSense script dynamically
+                    const s = document.createElement('script');
+                    s.setAttribute('data-ad-client', 'ca-pub-XXXXXXXXXXXX'); // replace with your publisher ID
+                    s.async = true;
+                    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+                    document.head.appendChild(s);
+                }
+            };
+        });
+    </script>
+
+</body>
+</html>

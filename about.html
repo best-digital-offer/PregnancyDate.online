@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about PregnancyDate.online - our mission to provide accurate pregnancy due date calculations and reliable pregnancy information resources.">
+    <meta name="keywords" content="about pregnancy calculator, pregnancy date calculator about, pregnancy resources, pregnancy information, due date calculator mission">
+    <meta name="author" content="PregnancyDate.online">
+    <title>About Us - Pregnancy Due Date Calculator | PregnancyDate.online</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="msapplication-TileColor" content="#e84e89">
+    <meta name="theme-color" content="#e84e89">
+
+    <!-- Canonical and Open Graph Tags -->
+    <link rel="canonical" href="https://pregnancydate.online/about.html">
+    <meta property="og:title" content="About PregnancyDate.online - Pregnancy Due Date Calculator">
+    <meta property="og:description" content="Learn about our mission to provide accurate pregnancy due date calculations and reliable pregnancy information.">
+    <meta property="og:url" content="https://pregnancydate.online/about.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+
+    <style>
+        :root {
+            --accent: #e84e89;
+            --bg: #f9fcff;
+            --muted: #777;
+            --card-bg: #ffffff;
+            --result-bg: #fff7fb;
+            --maxw: 1080px;
+            --radius: 10px;
+            --shadow: 0 2px 10px rgba(0,0,0,0.05);
+            --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+
+        * { box-sizing: border-box; }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-sans);
+            background: var(--bg);
+            color: #222;
+            line-height: 1.7;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        .container { max-width: var(--maxw); margin: 0 auto; padding: 20px; }
+        
+        /* Navigation */
+        .site-nav {
+            background: var(--card-bg);
+            padding: 16px 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+        .nav-container {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .site-logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Header */
+        .page-header {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: var(--accent);
+            font-size: 2.5rem;
+            margin: 0 0 15px;
+        }
+        .page-description {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #444;
+            font-size: 1.1rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: var(--accent);
+            margin-top: 0;
+            border-bottom: 2px solid var(--result-bg);
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #444;
+            margin-top: 25px;
+        }
+        ul { margin: 12px 0 12px 20px; }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        .team-member {
+            text-align: center;
+            padding: 20px;
+            background: var(--result-bg);
+            border-radius: var(--radius);
+        }
+        .member-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        /* Values Section */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        .value-card {
+            padding: 25px;
+            background: var(--result-bg);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--accent);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 24px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px;
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+        }
+        .footer-links {
+            margin-top: 10px;
+        }
+        .footer-links a {
+            margin: 0 10px;
+        }
+        
+        /* Mobile Styles */
+        @media (max-width: 720px) {
+            h1 { font-size: 1.8rem; }
+            .container { padding: 16px; }
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                gap: 15px;
+            }
+            .page-header {
+                padding: 30px 15px;
+            }
+            .content-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <div class="site-logo">PregnancyDate.online</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <h1>About PregnancyDate.online</h1>
+        <p class="page-description">Your trusted resource for accurate pregnancy due date calculations and reliable pregnancy information.</p>
+    </header>
+
+    <div class="container">
+        <!-- Mission Section -->
+        <section class="content-section">
+            <h2>Our Mission</h2>
+            <p>At PregnancyDate.online, our mission is to provide expectant parents with accurate, accessible, and reliable pregnancy information and tools. We understand that pregnancy is a special journey filled with questions and anticipation, and we're here to help you navigate it with confidence.</p>
+            
+            <p>Founded with the goal of making pregnancy information more accessible, our platform offers a simple yet powerful pregnancy due date calculator based on the medically accepted Naegele's Rule, along with comprehensive week-by-week pregnancy guides and resources.</p>
+        </section>
+
+        <!-- What We Offer Section -->
+        <section class="content-section">
+            <h2>What We Offer</h2>
+            
+            <h3>Accurate Due Date Calculator</h3>
+            <p>Our primary tool is the pregnancy due date calculator, which uses your Last Menstrual Period (LMP) to estimate your expected delivery date. This calculation follows the standard 280-day (40-week) pregnancy model used by healthcare professionals worldwide.</p>
+            
+            <h3>Comprehensive Pregnancy Information</h3>
+            <p>Beyond due date calculation, we provide detailed information about:</p>
+            <ul>
+                <li>Pregnancy week-by-week development</li>
+                <li>Trimesters and key milestones</li>
+                <li>Common symptoms and changes</li>
+                <li>Preparation for labor and delivery</li>
+                <li>Postpartum recovery information</li>
+            </ul>
+            
+            <h3>Accessible Resources</h3>
+            <p>All our tools and information are completely free to use, with no registration required. We believe that reliable pregnancy information should be available to everyone, regardless of their circumstances.</p>
+        </section>
+
+        <!-- Our Values Section -->
+        <section class="content-section">
+            <h2>Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Accuracy</h3>
+                    <p>We prioritize medically accurate information and clearly distinguish between established facts and general advice.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Accessibility</h3>
+                    <p>Our tools and resources are designed to be easy to use and understand for everyone, regardless of technical expertise.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Privacy</h3>
+                    <p>We respect your privacy and do not store personal pregnancy data. All calculations happen locally in your browser.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Transparency</h3>
+                    <p>We're clear about the limitations of our tools and always recommend consulting healthcare professionals for medical advice.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Editorial Standards Section -->
+        <section class="content-section">
+            <h2>Editorial Standards</h2>
+            <p>We maintain high editorial standards to ensure the information we provide is reliable and up-to-date:</p>
+            
+            <ul>
+                <li>Content is reviewed regularly and updated based on current medical guidelines</li>
+                <li>We cite reputable medical sources and research</li>
+                <li>We clearly distinguish between evidence-based information and general advice</li>
+                <li>We acknowledge the limitations of online tools and calculators</li>
+            </ul>
+            
+            <p>While we strive for accuracy, we always emphasize that our tools provide estimates and information, not medical diagnoses or treatment recommendations. We encourage users to consult with healthcare providers for personalized medical advice.</p>
+            
+            <h3>Content Updates</h3>
+            <p>Our content is reviewed and updated regularly to reflect current medical understanding and best practices. If you notice information that needs correction or updating, please contact us at <a href="mailto:editor@pregnancydate.online">editor@pregnancydate.online</a>.</p>
+        </section>
+
+        <!-- Team Section -->
+        <section class="content-section">
+            <h2>Our Commitment</h2>
+            <p>While PregnancyDate.online is primarily an automated resource, we're committed to maintaining the highest quality standards. Our approach combines:</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-icon">📚</div>
+                    <h3>Research-Based</h3>
+                    <p>Content grounded in established medical literature and guidelines</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-icon">🔍</div>
+                    <h3>Regular Review</h3>
+                    <p>Ongoing evaluation and updates to maintain accuracy</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-icon">💡</div>
+                    <h3>User-Focused</h3>
+                    <p>Tools and information designed around user needs and questions</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-icon">🛡️</div>
+                    <h3>Ethical Standards</h3>
+                    <p>Clear boundaries between information and medical advice</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disclaimer Section -->
+        <section class="content-section">
+            <h2>Important Disclaimer</h2>
+            <p>PregnancyDate.online provides informational resources and tools for educational purposes only. Our content should not be considered medical advice, diagnosis, or treatment recommendations.</p>
+            
+            <p>Always consult with qualified healthcare professionals for personalized medical guidance, especially regarding pregnancy, health conditions, or treatment decisions. The due date calculator provides estimates that may differ from your healthcare provider's assessment.</p>
+            
+            <p>By using our website, you acknowledge and agree that PregnancyDate.online is not liable for any decisions made based on the information provided through our tools and resources.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2025 PregnancyDate.online — Informational only, not medical advice.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a> | 
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+</body>
+</html>
